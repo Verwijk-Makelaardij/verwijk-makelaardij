@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Makelaarskantoor | Makelaardij Verwijk | Nederland
+{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href={{ asset('styles/home.css') }}>
+{% endblock %}
+
+{% block body %}
+	<main>
+		<article id="intro">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Wie zijn wij</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container section_content">
+				<div class="row">
+					<div class="col-md-12">
+						<p>Mijn naam is Berry Verwijk en ik maak graag het verschil.</p>
+						<p>Door mijn volledige aandacht en door goed te luisteren ga ik voor het beste persoonlijke advies en bemiddeling. Of het nu om verkoop, aankoop, verhuur of taxatie gaat, ik ken de lokale markt als geen ander. Het in tenslotte ook mijn woonomgeving en mijn thuis.</p>
+						<p>Het verschil maak ik door mijn persoonlijke aanpak en betrokkenheid tijdens alle fasen van uw vastgoedtransacties. Er is geen tussenkomst van een binnendienst of assistente. U heeft slechts met één persoon te maken.</p>
+					</div>
+				</div>
+			</div>
+		</article>
+		<article id="te_koop">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Te koop</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container section_content">
+				<div class="row">
+					{% for huis in teKoop %}
+						<div class="col-md-3 inner_content">
+							{% if huis[3] is defined %}
+								<a href="{{ huis[3] }}" target="_blank">
+							{% endif %}
+								{% if huis[2] == 'internal' %}
+									{# Kijkt of de afbeelding intern is opgeslagen #}
+									<img src="/images/{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% else %}
+									{# Als de afbeelding via een externe link komt #}
+									<img src="{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% endif %}
+							{% if huis[3] is defined %}
+								</a>
+							{% endif %}
+							<p class="title">{{ huis[0] }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</article>
+		<article id="aangekocht">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Aangekocht</h2>
+					</div>
+				</div>
+			</div>
+            <div class="container section_content">
+				<div class="row">
+					{% for huis in aankoop %}
+						<div class="col-md-3 inner_content">
+							{% if huis[3] is defined %}
+								<a href="{{ huis[3] }}" target="_blank">
+							{% endif %}
+								{% if huis[2] == 'internal' %}
+									{# Kijkt of de afbeelding intern is opgeslagen #}
+									<img src="/images/{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% else %}
+									{# Als de afbeelding via een externe link komt #}
+									<img src="{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% endif %}
+							{% if huis[3] is defined %}
+								</a>
+							{% endif %}
+							<p class="title">{{ huis[0] }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</article>
+		<article id="verkocht">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Verkocht</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container section_content">
+				<div class="row">
+					{% for huis in verkocht %}
+						<div class="col-md-3 inner_content">
+							{% if huis[3] is defined %}
+								<a href="{{ huis[3] }}" target="_blank">
+							{% endif %}
+								{% if huis[2] == 'internal' %}
+									{# Kijkt of de afbeelding intern is opgeslagen #}
+									<img src="/images/{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% else %}
+									{# Als de afbeelding via een externe link komt #}
+									<img src="{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% endif %}
+							{% if huis[3] is defined %}
+								</a>
+							{% endif %}
+							<p class="title">{{ huis[0] }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</article>
+		<article id="verhuurd">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Verhuurd</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container section_content">
+				<div class="row">
+					{% for huis in verhuurd %}
+						<div class="col-md-3 inner_content">
+							{% if huis[3] is defined %}
+								<a href="{{ huis[3] }}" target="_blank">
+							{% endif %}
+								{% if huis[2] == 'internal' %}
+									{# Kijkt of de afbeelding intern is opgeslagen #}
+									<img src="/images/{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% else %}
+									{# Als de afbeelding via een externe link komt #}
+									<img src="{{ huis[1] }}" alt="{{ huis[0] }}">
+								{% endif %}
+							{% if huis[3] is defined %}
+								</a>
+							{% endif %}
+							<p class="title">{{ huis[0] }}</p>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</article>
+		<article id="diensten">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Diensten</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container section_content">
+				<div class="row justify-content-center">
+					<div class="col-md-4">
+						<div class="inner_content">
+							<p>U kunt bij mij terecht voor verkoop en aankoop van uw woning. Voor verhuur en huur van uw woning en voor taxatie van uw bestaande of aangekochte woning.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+{% endblock %}

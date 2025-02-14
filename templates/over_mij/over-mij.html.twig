@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Over Mij{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href={{ asset('styles/over-mij.css') }}>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <article id="about_me">
+            <div class="container section_header">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Wie is uw makelaar</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container section_content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src={{ asset('images/Foto-Berry.avif') }} alt="Makelaar Verwijk">
+                    </div>
+                    <div class="col-md-6">
+                        <p>Mijn naam is Berry Verwijk en ik maak graag het verschil. Door mijn volledige aandacht en door goed te luisteren ga ik voor het beste persoonlijke advies en bemiddeling van uw onroerend goed. Of het nu om verkoop, aankoop, verhuur of taxatie gaat, ik ken de lokale markt als geen ander. Het is tenslotte ook mijn thuis. Daarnaast heb ik een grote expertise op het gebied van onderhandelen.</p>
+                        <p>Het verschil maak ik door mijn persoonlijke betrokkenheid tijdens alle fasen van uw vastgoedtransacties. Dus geen tussenkomst van een binnendienst of assistente u heeft slechts met één persoon te maken.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+{% endblock %}

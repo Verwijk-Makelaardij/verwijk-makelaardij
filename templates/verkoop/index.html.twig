@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello VerkoopController!{% endblock %}
+
+{% block body %}
+	<main>
+		<article class="verkoop">
+			<div class="container section_header">
+				<div class="row">
+					<div class="col-md-12">
+						<h2>Verkoop</h2>
+					</div>
+				</div>
+			</div>
+			<div class="container section_content">
+				<div class="row">
+					<div class="col-md-6">
+						<p>Overweeg je je woning te verkopen?</p>
+                        <p>Graag ontzorg ik je bij de verkoop van je woning. Mijn begeleiding is flexibel en persoonlijk. Het hele verkoopproces neem ik met je door en natuurlijk is het mogelijk je wensen daarbij kenbaar te maken.</p>
+                        <p>Vraag om een vrijblijvende offerte voor de bemiddeling bij verkoop van uw woning.</p>
+					</div>
+					<div class="col-md-6">
+						<img src={{ asset('images/Foto-Berry.avif') }} alt="Makelaar Verwijk">
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+{% endblock %}

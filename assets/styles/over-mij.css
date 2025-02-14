@@ -1,0 +1,17 @@
+/** MAIN **/
+
+/* ABOUT ME */
+
+/* Section Header */
+main #about_me .section_header h1 {
+    text-align: center;
+}
+
+/* Section Content */
+main #about_me .section_content .row .col-md-6:nth-child(1) img {
+    display: block;
+    margin: 0 auto;
+}
+main #about_me .section_content .row .col-md-6:nth-child(2) p {
+    text-align: right;
+}

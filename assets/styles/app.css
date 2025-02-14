@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/** HEADER **/
+header {
+    background-color: #a2c5c6;
+    padding: 10px 0;
+}
+
+/* NAV */
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+}
+
+header nav ul li {
+    list-style: none;
+    width: fit-content;
+    padding: 5px 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active {
+    color: #000;
+}
+
+/** BODY **/
+
+/* ALL */
+
+/* Article */
+article {
+    padding: 25px 0;
+}
+
+/* Section Header */
+
+/* Section Content */
+main article .section_content .row .inner_content img {
+    max-width: 100%;
+}
+
+/** FOOTER **/
+footer {
+    background-color: #a2c5c6;
+    color: #fff;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover,
+footer a:active {
+    color: #000;
+}
+
+footer #contact .section_header h2 {
+    text-align: center;
+}
